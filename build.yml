@@ -35,4 +35,8 @@ jobs:
         run: |
           echo "Checking MovieZone project"
           find . -maxdepth 5 -type f | sort
-
+          
+      - name: Check project files
+        run: |
+          echo "Checking MovieZone project"
+          find . -maxdepth 5 -type f | sort
