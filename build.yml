@@ -1,3 +1,5 @@
+
+          
 name: Build MovieZone APK
 
 on:
@@ -29,12 +31,8 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Build MovieZone APK
-        run: gradle assembleDebug
+      - name: Check project files
+        run: |
+          echo "Checking MovieZone project"
+          find . -maxdepth 5 -type f | sort
 
-      - name: Save APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: MovieZone-debug-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
-          
