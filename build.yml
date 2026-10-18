@@ -40,3 +40,11 @@ jobs:
         run: |
           echo "Checking MovieZone project"
           find . -maxdepth 5 -type f | sort
+                - name: Build MovieZone APK
+        run: gradle assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MovieZone-debug-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
