@@ -79,3 +79,4 @@ uses: actions/checkout@v4
     run: |
       echo "Checking MovieZone project"
       ls -la
+
